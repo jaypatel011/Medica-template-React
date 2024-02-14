@@ -11,7 +11,7 @@ const Practice = (props) => {
         <h3 className="practice-header">{props.title}</h3>
         <p className="practice-caption">{props.description}</p>
       </div>
-      <div className="read-more">
+      <div className="practice-more read-more">
         <span className="practice-text">Read more</span>
         <img alt="image" src="/Icons/arrow-2.svg" className="practice-image" />
       </div>

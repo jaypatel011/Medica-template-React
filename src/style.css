@@ -63,7 +63,11 @@
   list-style-position: outside;
 }
 .list-item {
+  margin: var(--dl-space-space-unit);
   display: list-item;
+  font-size: x-large;
+  font-family: inherit;
+  font-display: block;
 }
 .teleport-show {
   display: flex !important;
