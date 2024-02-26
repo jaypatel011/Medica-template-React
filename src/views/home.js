@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Helmet } from 'react-helmet'
@@ -8,11 +8,22 @@ import Practice from '../components/practice'
 import './home.css'
 
 const Home = (props) => {
+  // State to manage the visibility of the mobile menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Function to toggle the menu visibility
+  const toggleMenu = () => {
+    console.log('clicked');
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="home-container">
       <Helmet>
-        <title>SFS</title>
-        <meta property="og:title" content="SFS" />
+        <title>Fire Sprinkler Installation & Inspection Services | Specialty Fire Services</title>
+        <meta property="og:title" content="Fire Sprinkler Installation & Inspection Services | Specialty Fire Services" />
+        <meta name="description" content="Offering professional fire sprinkler installation, emergency fire alarm repair, and commercial fire protection services. Ensure your safety with our comprehensive fire safety solutions."/>
+        <meta name="keywords" content="fire sprinkler installation, fire alarm system maintenance, commercial fire protection services, residential fire safety solutions"/>
       </Helmet>
       <section id="home" className="home-home">
         <header data-thq="thq-navbar" className="home-navbar">
@@ -53,62 +64,52 @@ const Home = (props) => {
               <span className="home-text">Contact Us</span>
             </a>
           </div>
-          <div data-thq="thq-burger-menu" className="home-burger-menu">
+          <div data-thq="thq-burger-menu" className="home-burger-menu" onClick={toggleMenu}>
             <svg viewBox="0 0 1024 1024" className="home-icon">
-              <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
+              <path fill='white' d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
             </svg>
           </div>
-          <div data-thq="thq-mobile-menu" className="home-mobile-menu">
-            <div
-              data-thq="thq-mobile-menu-nav"
-              data-role="Nav"
-              className="home-nav"
-            >
-              <div className="home-container1">
-                <img
-                  alt="image"
-                  src="/Branding/logo.jpg"
-                  className="home-image02"
-                />
-                <div data-thq="thq-close-menu" className="home-menu-close">
-                  <svg viewBox="0 0 1024 1024" className="home-icon02">
-                    <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
-                  </svg>
+          {isMenuOpen && (
+            <div data-thq="thq-mobile-menu" className="home-mobile-menu">
+              <div data-thq="thq-mobile-menu-nav" data-role="Nav" className="home-nav">
+                <div className="home-container1">
+                  <img alt="image" src="/Branding/logo.jpg" className="home-image02" />
+                  <div data-thq="thq-close-menu" className="home-menu-close" onClick={toggleMenu}>
+                    <svg viewBox="0 0 1024 1024" className="home-icon02">
+                      <path fill='white' d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <nav
-                data-thq="thq-mobile-menu-nav-links"
-                data-role="Nav"
-                className="home-nav1"
-              >
+                <nav data-thq="thq-mobile-menu-nav-links" data-role="Nav" className="home-nav1">
                 <a href="#services" className="home-link05">
-                  Services
-                </a>
-                <a href="#how-it-works" className="home-link06">
-                  Why choose us
-                </a>
-                <span className="home-link07">FAQ</span>
-                <a href="#Contact" className="home-link08">
-                  Contact
-                </a>
-                <button className="home-phone1 button">
-                  <img
-                    alt="image"
-                    src="/Icons/phone.svg"
-                    className="home-image03"
-                  />
-                  <a href="tel:+18326846045" className="home-link09">
-                    +1 832-684-6045
-                  </a>
-                </button>
-              </nav>
+                      Services
+                    </a>
+                    <a href="#how-it-works" className="home-link06">
+                      Why choose us
+                    </a>
+                    <span className="home-link07">FAQ</span>
+                    <a href="#Contact" className="home-link08">
+                      Contact
+                    </a>
+                    <button className="home-phone1 button">
+                      <img
+                        alt="image"
+                        src="/Icons/phone.svg"
+                        className="home-image03"
+                      />
+                      <a href="tel:+18326846045" className="home-link09">
+                        +1 832-684-6045
+                      </a>
+                    </button>
+                </nav>
+              </div>
             </div>
-          </div>
+          )}
         </header>
         <div className="home-main">
           <div className="home-content">
             <div className="home-heading">
-              <h1 className="home-header"> Specialty Fire Services</h1>
+              <h1 className="home-header">Specialty Fire Services</h1>
               <span className="home-text01">
                 Your Partner in Comprehensive Fire Protection
               </span>
