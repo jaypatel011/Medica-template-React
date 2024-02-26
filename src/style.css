@@ -74,7 +74,7 @@
 }
 .button-main {
   gap: var(--dl-space-space-halfunit);
-  color: rgb(255, 255, 255);
+  color: var(--dl-color-gray-white);
   cursor: pointer;
   display: flex;
   font-style: normal;
@@ -101,7 +101,7 @@
   display: flex;
   transition: 0.3s;
   align-items: flex-start;
-  border-color: #ffffff;
+  border-color: var(--dl-color-gray-white);
   flex-direction: column;
   border-right-width: 1px;
 }
@@ -121,7 +121,7 @@
 }
 .button-white {
   color: #000000;
-  background-color: #ffffff;
+  background-color: var(--dl-color-gray-white);
 }
 .symptom {
   cursor: pointer;
@@ -134,7 +134,8 @@
   padding-right: var(--dl-space-space-oneandhalfunits);
   padding-bottom: var(--dl-space-space-unit);
   justify-content: center;
-  background-color: #E9E9EB;
+  color: var(--dl-color-gray-white);
+  background-color: var(--dl-color-gray-black);
 }
 .symptom:hover {
   opacity: 0.5;
@@ -184,6 +185,7 @@
   padding-bottom: var(--dl-space-space-unit);
   background-color: transparent;
   border-bottom-width: 1px;
+  color: var(--dl-color-gray-white);
 }
 .arrow {
   width: 60px;
@@ -255,6 +257,7 @@
   line-height: 1.15;
   text-transform: none;
   text-decoration: none;
+  background-color: #000;
 }
 .Heading {
   font-size: 32px;

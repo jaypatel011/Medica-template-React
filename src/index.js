@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { hot } from 'react-hot-loader/root';
 import {
   BrowserRouter as Router,
   Route,
@@ -24,5 +25,6 @@ const App = () => {
     </Router>
   )
 }
+export default hot(App);
 
 ReactDOM.render(<App />, document.getElementById('app'))

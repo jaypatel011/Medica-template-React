@@ -20,7 +20,7 @@ const Home = (props) => {
             <Link to="/" className="home-navlink">
               <img
                 alt="image"
-                src="/Branding/logo-1500h.webp"
+                src="/Branding/logo.jpg"
                 className="home-logo"
               />
             </Link>
@@ -67,7 +67,7 @@ const Home = (props) => {
               <div className="home-container1">
                 <img
                   alt="image"
-                  src="/Branding/logo-1500h.webp"
+                  src="/Branding/logo.jpg"
                   className="home-image02"
                 />
                 <div data-thq="thq-close-menu" className="home-menu-close">
@@ -415,7 +415,7 @@ const Home = (props) => {
         <div className="home-container5">
           <img
             alt="logo"
-            src="/Branding/logo-1500h.webp"
+            src="/Branding/logo.jpg"
             className="home-image10"
           />
           <nav className="home-nav2">
