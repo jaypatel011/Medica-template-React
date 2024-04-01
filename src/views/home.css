@@ -1,3 +1,31 @@
+.error-message{
+  color: var(--dl-color-danger-700);
+  margin-bottom: -16px;
+}
+.error{
+  border-color: var(--dl-color-danger-700);
+  margin-bottom: -16px;
+}
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #fff;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 .home-container {
   width: 100%;
   display: flex;
@@ -473,6 +501,18 @@
   flex-direction: column;
   padding-bottom: var(--dl-space-space-fourunits);
 }
+.home-about-us {
+  gap: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-fourunits);
+  padding-left: var(--dl-space-space-fiveunits);
+  padding-right: var(--dl-space-space-fiveunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-fourunits);
+  background-color: #2461FF;
+}
 .home-section {
   width: 100%;
   display: flex;
@@ -504,6 +544,11 @@
 .home-capton {
   font-size: 18px;
   max-width: 600px;
+  line-height: 27px;
+}
+.home-about {
+  max-width: 1200px;
+  font-size: 18px;
   line-height: 27px;
 }
 .home-image05 {
@@ -613,14 +658,12 @@
   display: flex;
   align-items: center;
   padding-top: var(--dl-space-space-fourunits);
-  border-color: #B4B9C6;
   padding-left: var(--dl-space-space-fiveunits);
   padding-right: var(--dl-space-space-fiveunits);
   flex-direction: column;
   padding-bottom: var(--dl-space-space-fourunits);
   justify-content: center;
   background-color: var(--dl-color-gray-500);
-  border-bottom-width: 1px;
 }
 .home-heading6 {
   gap: var(--dl-space-space-oneandhalfunits);
@@ -650,12 +693,13 @@
   text-align: center;
 }
 .home-form {
-  gap: var(--dl-space-space-fourunits);
+  gap: var(--dl-space-space-oneandhalfunits);
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  margin-top: var(--dl-space-space-twounits);
 }
 .home-types {
   gap: var(--dl-space-space-unit);
@@ -948,6 +992,11 @@
   }
   .home-capton {
     max-width: 100%;
+    text-align: center;
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .home-about {
     text-align: center;
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
